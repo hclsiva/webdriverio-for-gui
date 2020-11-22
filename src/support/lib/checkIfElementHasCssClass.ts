@@ -9,6 +9,5 @@ export function hasClass(
   element: WebdriverIO.Element,
   htmlClass: string
 ): boolean {
-  console.log(" element.getAttribute of class " + element.getAttribute("class") + " htmlClass " + htmlClass + " search = " + element.getAttribute("class").search(htmlClass));
   return element.getAttribute("class").search(htmlClass) >= 0;
 }

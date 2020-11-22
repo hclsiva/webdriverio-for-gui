@@ -9,6 +9,4 @@ import { videoPlayerElem } from "../../constants/page-constants";
 export function checkVideo(selector): void {
     browser.switchToFrame(0);
     const videoPlayer = browser.$(selector);
-    console.log("video object", videoPlayer);
-
 }
