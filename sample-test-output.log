@@ -1,0 +1,256 @@
+ubuntu@ubuntu-VirtualBox:~/tools/webautomation/webdriverio-for-gui$ npm run test
+
+> docker-automation@1.0.0 test
+> ./node_modules/.bin/cross-env VNC_SUPPORT=false DEBUG_TEST=false npm run test:run:local
+
+
+> docker-automation@1.0.0 test:run:local
+> npm run report:clean && npm run test:run && npm run report || npm run report
+
+
+> docker-automation@1.0.0 report:clean
+> rimraf ./report
+
+
+> docker-automation@1.0.0 test:run
+> node ./node_modules/@wdio/cli/bin/wdio.js --spec
+
+2020-11-22T07:37:49.015Z INFO @automation: Starting tests...
+
+Execution of 2 spec files started at 2020-11-22T07:37:49.049Z
+
+[1-0] RUNNING in firefox - /src/features/volvotests.feature
+[0-0] RUNNING in chrome - /src/features/volvotests.feature
+[1-0] PASSED in firefox - /src/features/volvotests.feature
+[0-0] PASSED in chrome - /src/features/volvotests.feature
+
+ "spec" Reporter:
+------------------------------------------------------------------
+[firefox 73.0 linux #1-0] Spec: /home/ubuntu/tools/webautomation/webdriverio-for-gui/src/features/volvotests.feature
+[firefox 73.0 linux #1-0] Running: firefox (v73.0) on linux
+[firefox 73.0 linux #1-0] Session ID: b6e781d0-bcc5-485e-856f-c3fc2601c13c
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0] A million more page test
+[firefox 73.0 linux #1-0]     Title check
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ Then I expect the title to match
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0]     Check Learn more about car safety link
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ Then Learn more about car safety link is displayed
+[firefox 73.0 linux #1-0]        ✓ When I click on the Learn more about car safety link
+[firefox 73.0 linux #1-0]        ✓ Then I expect the page title to be changed after loading car safety page
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0]     Check decades of innovation learn more button functionality
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ Then Learn more button is displayed
+[firefox 73.0 linux #1-0]        ✓ When I click on the button learn more about innovation button
+[firefox 73.0 linux #1-0]        ✓ Then I expect the title to be changed after loading innovation page
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0]     Check car models list pagination
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ Then I expect previous button to be disabled
+[firefox 73.0 linux #1-0]        ✓ And I expect next button to be enabled
+[firefox 73.0 linux #1-0]        ✓ When I click on next button
+[firefox 73.0 linux #1-0]        ✓ Then I expect previous button to be enabled
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0]     Check the International Volvo page
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ When I click on International Volvo image link
+[firefox 73.0 linux #1-0]        ✓ Then I expect the International title to match
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0]     Check the other site navigation button
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ When Build your own element is not visible
+[firefox 73.0 linux #1-0]        ✓ When I click on site navigation button
+[firefox 73.0 linux #1-0]        ✓ Then Build your own element is visible
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0]     watch the story
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ When I click on watch the story button
+[firefox 73.0 linux #1-0]        ✓ Then I expect the title to match
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0]     Check the Heading link of SUV XC
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ When I click on SUV XC90 Header Link
+[firefox 73.0 linux #1-0]        ✓ Then Check the SUV XC90 Target URL is correct
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0]     Check the Learn link of SUV XC90
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ When I click on SUV XC90 Learn Link
+[firefox 73.0 linux #1-0]        ✓ Then Check the SUV XC90 Target Learn URL is correct
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0]     Check the Shop link of SUV XC90
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ When I click on SUV XC90 Shop Link
+[firefox 73.0 linux #1-0]        ✓ Then Check the SUV XC90 Target Shop URL is correct
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0]     Check the Heading link of SUV XC60
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ When I click on SUV XC60 Header Link
+[firefox 73.0 linux #1-0]        ✓ Then Check the SUV XC60 Target URL is correct
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0]     Check the Learn link of SUV XC60
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ When I click on SUV XC60 Learn Link
+[firefox 73.0 linux #1-0]        ✓ Then Check the SUV XC60 Target Learn URL is correct
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0]     Check the Shop link of SUV XC60
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ When I click on SUV XC60 Shop Link
+[firefox 73.0 linux #1-0]        ✓ Then Check the SUV XC60 Target Shop URL is correct
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0]     Check the Heading link of SUV XC40
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ When I click on SUV XC40 Header Link
+[firefox 73.0 linux #1-0]        ✓ Then Check the SUV XC40 Target URL is correct
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0]     Check the Learn link of SUV XC40
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ When I click on SUV XC40 Learn Link
+[firefox 73.0 linux #1-0]        ✓ Then Check the SUV XC40 Target Learn URL is correct
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0]     Check the Shop link of SUV XC40
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ When I click on SUV XC40 Shop Link
+[firefox 73.0 linux #1-0]        ✓ Then Check the SUV XC40 Target Shop URL is correct
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0]     Check the Heading link of SUV XC40 Electric
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ When I click on SUV XC40Electric Header Link
+[firefox 73.0 linux #1-0]        ✓ Then Check the SUV XC40Electric Target URL is correct
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0]     Check the Learn link of SUV XC40 Electric
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ When I click on SUV XC40Electric Learn Link
+[firefox 73.0 linux #1-0]        ✓ Then Check the SUV XC40Electric Target Learn URL is correct
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0]     Check the Shop link of SUV XC40 Electric
+[firefox 73.0 linux #1-0]        ✓ Given I'm on the car safety page
+[firefox 73.0 linux #1-0]        ✓ When I click on SUV XC40Electric Shop Link
+[firefox 73.0 linux #1-0]        ✓ Then Check the SUV XC40Electric Target Shop URL is correct
+[firefox 73.0 linux #1-0]
+[firefox 73.0 linux #1-0] 61 passing (2m 13.8s)
+------------------------------------------------------------------
+[chrome 80.0.3987.106 linux #0-0] Spec: /home/ubuntu/tools/webautomation/webdriverio-for-gui/src/features/volvotests.feature
+[chrome 80.0.3987.106 linux #0-0] Running: chrome (v80.0.3987.106) on linux
+[chrome 80.0.3987.106 linux #0-0] Session ID: adb9edbfbf7acf9d20109aeeb98b20c4
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0] A million more page test
+[chrome 80.0.3987.106 linux #0-0]     Title check
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then I expect the title to match
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0]     Check Learn more about car safety link
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then Learn more about car safety link is displayed
+[chrome 80.0.3987.106 linux #0-0]        ✓ When I click on the Learn more about car safety link
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then I expect the page title to be changed after loading car safety page
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0]     Check decades of innovation learn more button functionality
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then Learn more button is displayed
+[chrome 80.0.3987.106 linux #0-0]        ✓ When I click on the button learn more about innovation button
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then I expect the title to be changed after loading innovation page
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0]     Check car models list pagination
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then I expect previous button to be disabled
+[chrome 80.0.3987.106 linux #0-0]        ✓ And I expect next button to be enabled
+[chrome 80.0.3987.106 linux #0-0]        ✓ When I click on next button
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then I expect previous button to be enabled
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0]     Check the International Volvo page
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ When I click on International Volvo image link
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then I expect the International title to match
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0]     Check the other site navigation button
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ When Build your own element is not visible
+[chrome 80.0.3987.106 linux #0-0]        ✓ When I click on site navigation button
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then Build your own element is visible
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0]     watch the story
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ When I click on watch the story button
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then I expect the title to match
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0]     Check the Heading link of SUV XC
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ When I click on SUV XC90 Header Link
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then Check the SUV XC90 Target URL is correct
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0]     Check the Learn link of SUV XC90
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ When I click on SUV XC90 Learn Link
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then Check the SUV XC90 Target Learn URL is correct
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0]     Check the Shop link of SUV XC90
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ When I click on SUV XC90 Shop Link
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then Check the SUV XC90 Target Shop URL is correct
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0]     Check the Heading link of SUV XC60
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ When I click on SUV XC60 Header Link
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then Check the SUV XC60 Target URL is correct
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0]     Check the Learn link of SUV XC60
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ When I click on SUV XC60 Learn Link
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then Check the SUV XC60 Target Learn URL is correct
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0]     Check the Shop link of SUV XC60
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ When I click on SUV XC60 Shop Link
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then Check the SUV XC60 Target Shop URL is correct
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0]     Check the Heading link of SUV XC40
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ When I click on SUV XC40 Header Link
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then Check the SUV XC40 Target URL is correct
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0]     Check the Learn link of SUV XC40
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ When I click on SUV XC40 Learn Link
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then Check the SUV XC40 Target Learn URL is correct
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0]     Check the Shop link of SUV XC40
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ When I click on SUV XC40 Shop Link
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then Check the SUV XC40 Target Shop URL is correct
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0]     Check the Heading link of SUV XC40 Electric
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ When I click on SUV XC40Electric Header Link
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then Check the SUV XC40Electric Target URL is correct
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0]     Check the Learn link of SUV XC40 Electric
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ When I click on SUV XC40Electric Learn Link
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then Check the SUV XC40Electric Target Learn URL is correct
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0]     Check the Shop link of SUV XC40 Electric
+[chrome 80.0.3987.106 linux #0-0]        ✓ Given I'm on the car safety page
+[chrome 80.0.3987.106 linux #0-0]        ✓ When I click on SUV XC40Electric Shop Link
+[chrome 80.0.3987.106 linux #0-0]        ✓ Then Check the SUV XC40Electric Target Shop URL is correct
+[chrome 80.0.3987.106 linux #0-0]
+[chrome 80.0.3987.106 linux #0-0] 61 passing (2m 31.7s)
+
+
+Spec Files:	 2 passed, 2 total (100% completed) in 00:02:43 
+
+
+> docker-automation@1.0.0 report
+> node ./cucumber.report.conf.js
+
+
+
+=====================================================================================
+    Multiple Cucumber HTML report generated in:
+
+    /home/ubuntu/tools/webautomation/webdriverio-for-gui/report/cucumber/html/index.html
+=====================================================================================
+
+ubuntu@ubuntu-VirtualBox:~/tools/webautomation/webdriverio-for-gui$ 
