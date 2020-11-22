@@ -70,4 +70,5 @@ class CarSafetyPage {
     return videoPlayerElem;
   }
 }
+
 export const carSafetyPage = new CarSafetyPage();
