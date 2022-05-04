@@ -19,4 +19,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: artifacts
-          path: webdriverio-for-gui/report
+          path: ./report          
