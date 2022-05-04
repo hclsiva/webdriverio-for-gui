@@ -14,13 +14,16 @@ import {
   buildYourOwnElem,
   watchTheStoryButton,
   videoPlayerElem,
+  cookiesButton
 } from "../constants/page-constants";
 
 class CarSafetyPage {
   goToCarSafetyPage(): void {
     browser.url(url);
   }
-
+  get cookieBtn(){
+    return $(cookiesButton);
+  }
   getTitle(): string {
     return aMillionMorePageTitle;
   }

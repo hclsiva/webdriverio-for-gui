@@ -3,6 +3,7 @@ export const url = "https://www.volvocars.com/intl/v/car-safety/a-million-more";
 
 //xpath and CSS Section
 //export const learnMoreAboutCarSafetyLink = 'a*=Learn more about car safety';
+export const cookiesButton = `//button[@id='onetrust-accept-btn-handler']`;
 export const learnMoreAboutCarSafetyLink = '/html/body/div[4]/div/div/main/div[4]/section/div/div[2]/div/a';
 //export const learnMoreAboutInnovationButton = 'a*=Learn more';
 export const learnMoreAboutInnovationButton = '/html/body/div[4]/div/div/main/div[6]/section/div[1]/div[2]/div/div/div/div[3]/div/div/a';
@@ -55,7 +56,7 @@ export const xc40ElectricLearnLinkTargetURL = "https://www.volvocars.com/intl/v/
 export const xc40ElectricShopLinkTargetURL = "https://www.volvocars.com/intl/build/suv/xc40#filterElectric";
 
 //Title Constants
-export const aMillionMorePageTitle = "A million more | Volvo Cars";
+export const aMillionMorePageTitle = "A million more | Volvo Cars - International";
 export const carSafety = "Car safety | Volvo Cars";
 export const safetyinnovation = "Safety innovations | Volvo Cars";
 export const internatinalVolvoTitle = "International | Volvo Cars";

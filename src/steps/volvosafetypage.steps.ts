@@ -14,9 +14,18 @@ Given(/^I'm on the car safety page$/, { timeout: 70000 }, () => {
   carSafetyPage.goToCarSafetyPage();
 });
 
+Then(/^Verify and accept all cookies$/, () => {
+  console.log("Verify and accept all cookies")
+  if(carSafetyPage.cookieBtn.isDisplayed()){
+    carSafetyPage.cookieBtn.click();
+  } else{
+    console.log("Cookies Button not displayed")
+  }
+});
+
 Then(/^I expect the title to match$/, () => {
   const title = carSafetyPage.getTitle();
-  browser.waitUntil(() => browser.getTitle() === title, 70000);
+  console.log("Browser Title = ", browser.getTitle());
   expect(browser.getTitle()).to.equal(title);
 });
 
