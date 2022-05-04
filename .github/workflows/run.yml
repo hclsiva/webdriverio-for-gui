@@ -16,3 +16,7 @@ jobs:
       - run: npm run selenium
       - run: npm run test
       - run: npm run selenium:stop
+      - uses: actions/upload-artifact@v3
+        with:
+          name: artifacts
+          path: webdriverio-for-gui/report
