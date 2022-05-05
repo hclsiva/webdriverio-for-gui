@@ -51,8 +51,11 @@ class CarSafetyPage {
     return $(modelsListPrevButton);
   }
 
-  getModelsListNextButton(): WebdriverIO.Element {
+  getModelsListNextButtonElem(): WebdriverIO.Element {
     return $(modelsListNextButton);
+  }
+  getModelsListNextButton(): string {
+    return modelsListNextButton;
   }
   getInternationalVolvoAnchor(): WebdriverIO.Element {
     return $(internationalVolvo);

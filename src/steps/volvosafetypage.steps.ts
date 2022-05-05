@@ -2,12 +2,14 @@ import { Given, When, Then } from "cucumber";
 import { carSafetyPage } from "../pages/CarSafety.page";
 import { expect } from "chai";
 import { clickElement } from "../support/action/clickElement";
+import { checkIfElementExists } from "../support/lib/checkIfElementExists";
 import { hasClass } from "../support/lib/checkIfElementHasCssClass";
 import { checkVideo } from "../support/check/checkVideo";
 import { suv_xc90 } from "../pages/SUVXC90";
 import { suv_xc60 } from "../pages/SUVXC60";
 import { suv_xc40 } from "../pages/SUVXC40";
 import { suv_xc40Electric } from "../pages/SUVXC40Electric";
+const cucumberJson = require("wdio-cucumberjs-json-reporter").default;
 
 
 Given(/^I'm on the car safety page$/, { timeout: 70000 }, () => {
@@ -66,18 +68,23 @@ Then(/^I expect the title to be changed after loading innovation page$/, { timeo
 
 Then(/^I expect previous button to be disabled$/, () => {
   const prevButton = carSafetyPage.getModelsListPreviousButton();
-  expect(hasClass(prevButton, "nn")).equal(true);
+  cucumberJson.attach(browser.takeScreenshot(), "image/png");
+  browser.pause(7000);
+  console.log("prevButton is Disabled ");
+  expect(prevButton.isEnabled()).equal(false);
 
 });
 
 Then(/^I expect next button to be enabled$/, () => {
-  const nextButton = carSafetyPage.getModelsListNextButton();
-  expect(hasClass(nextButton, "nn")).equal(false);
+  const nextButton = carSafetyPage.getModelsListNextButtonElem();
+  expect(nextButton.isEnabled()).equal(true);
 });
 
 When(/^I click on next button$/, () => {
-  const nextButton = carSafetyPage.getModelsListNextButton();
-  clickElement("click", nextButton);
+    console.log(" I click on next button Browser Title = ", browser.getTitle());
+    checkIfElementExists(carSafetyPage.getModelsListNextButton(),true,1);
+    const nextButton = carSafetyPage.getModelsListNextButton();
+    clickElement("click", nextButton);
 });
 
 Then(/^I expect previous button to be enabled$/, () => {
@@ -162,7 +169,8 @@ When(/^I click on SUV XC60 Learn Link$/, { timeout: 70000 }, () => {
 Then(/^Check the SUV XC60 Target Learn URL is correct$/, { timeout: 70000 }, () => {
   const suvXC60LearnTargetURL = suv_xc60.getXC60HybridLearnLinkTargetURL();
   browser.pause(2000);
-  expect(browser.getUrl().trim()).to.equal(suvXC60LearnTargetURL.trim());
+  cucumberJson.attach(browser.takeScreenshot(), "image/png");  
+ expect(browser.getUrl().trim()).to.equal(suvXC60LearnTargetURL.trim());
 });
 When(/^I click on SUV XC60 Shop Link$/, { timeout: 70000 }, () => {
   const suvXC60ShopLink = suv_xc60.getXC60HybridShopLink();
